@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Newsletter from '../components/newsletter'
+import Script from 'next/script'
 import { useState } from 'react'
 const Home: NextPage = () => {
 
@@ -12,16 +13,15 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>naeRaste</title>
+        <title>nae raste</title>
         <meta name="description" content="Superpowered notebooks" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest"/>
         <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
       </Head>
-
       <main className={styles.main}>
         <h1 className={styles.title}>
-         naeRaste │ नए रास्ते
+         nae raste │ नए रास्ते
         
         </h1>
 
@@ -96,9 +96,24 @@ const Home: NextPage = () => {
           
           
         </div>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column'
+        }}>
+
+        <p style={{
+          padding: '10px',
+        }}>
+        Subscribe to our newsletter to get updates on new resources and blogs
+          </p>
+        <Image src={'/arrow-27.svg'} alt="Newsletter" width={100} height={100} />
+        </div>
+
       </main>
 
-      <Newsletter />
+      <Script async data-uid="37bab4a468" src="https://artisanal-producer-6695.ck.page/37bab4a468/index.js"></Script>
     </div>
   )
 }

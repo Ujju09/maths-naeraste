@@ -75,6 +75,7 @@ export async function getStaticProps() {
   const books = await res.json();
 
   return {
-    props: { records: books.records }, // will be passed to the page component as props
+    props: { records: books.records },
+    revalidate: 86400,
   };
 }

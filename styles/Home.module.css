@@ -190,6 +190,10 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#12B3EB", en
   .card{
     width:100%
   }
+  .practiceCard{
+    width: 90%;
+    justify-content: space-around;
+  }
   .helpcard{
     width:100%;
     padding: 1.2rem;

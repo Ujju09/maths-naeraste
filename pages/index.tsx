@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import Newsletter from '../components/newsletter'
 import Script from 'next/script'
 import { useState } from 'react'
 const Home: NextPage = () => {
@@ -26,7 +25,8 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          maths <br/><span>
+          <h2>maths<br/>
+            </h2> <span>
           <label>select your class </label>  
             <select style={{
               width: '100px',
@@ -75,14 +75,6 @@ const Home: NextPage = () => {
             <h3  style={{
               color: '#D05E70',
             }}>Stuck ? Ask here</h3>
-            </a>
-          </Link>
-          <Link href="/bebetter" >
-            <a className={styles.card}>
-            <Image src="/blog.svg" alt="Blogs" width={100} height={100} />
-            <h3 style={{
-              color: 'green',
-            }}>Be better blog</h3>
             </a>
           </Link>
           <Link href="/booksforyou" >

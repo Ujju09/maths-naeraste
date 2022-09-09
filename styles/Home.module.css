@@ -107,10 +107,10 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#12B3EB", en
   flex-direction: column;
   padding: 1.5rem;
   color: inherit;
-  background-color: aliceblue;
+  background-color: transparent;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 40px;
+  border: 1px solid #0a0a0a;
+  border-radius: 12px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
 }
@@ -166,6 +166,19 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#12B3EB", en
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+  font-weight: 300;
+}
+
+.helpcard h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.helpcard p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 .logo {
@@ -208,6 +221,18 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#12B3EB", en
   font-size: 1.2rem;
   
   font-weight: 300;
+  border: none;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.notionbutton{
+  background-color:#000000;
+  border-radius: 40px;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 500;
   border: none;
   cursor: pointer;
   margin: 1rem;

@@ -77,6 +77,15 @@ const Home: NextPage = () => {
             }}>Stuck ? Ask here</h3>
             </a>
           </Link>
+          <Link href="/notion-templates" className={styles.card}>
+            <a className={styles.card}>
+            <Image src="/Notion-logo.svg" alt="Notion" width={80} height={80} />
+            <h3  style={{
+              color: 'black',
+              paddingLeft: '10px',
+            }}>Notion pages, you&apos;ll love.</h3>
+            </a>
+          </Link>
           <Link href="/booksforyou" >
             <a className={styles.card}>
             <Image src="/book.svg" alt="Blogs" width={100} height={80} />

@@ -15,44 +15,31 @@ export default function BooksForYou({ records }) {
       <main className={styles.main}>
         <h1 className={styles.title}>Books For You</h1>
 
-        <p>Obviously they don&apos;t teach you this at school.</p>
-        <div className={styles.grid}>
+        <p
+          style={{
+            color: "black",
+            fontWeight: "300",
+          }}
+        >
+          Obviously they don&apos;t teach you this at school.
+        </p>
+        <div className={styles.bookgrid}>
           {records.map((record, index) => (
-            <div className={styles.card} key={index}>
-              <a
-                href={record.fields["buylink"]}
-                style={{
-                  textDecoration: "none",
-                  padding: "0.5rem",
-                  alignContent: "center",
-                }}
-              >
-                <Image
-                  src={record.fields["Url"]}
-                  alt={record.fields["Title"]}
-                  width={200}
-                  height={300}
-                />
-                <h3
-                  style={{
-                    textOverflow: "ellipsis",
-                    maxLines: 1,
-                    overflow: "hidden",
-                    wordWrap: "break-word",
-                  }}
-                >
-                  {record.fields["Title"]}
-                </h3>
-                <p
-                  style={{
-                    fontSize: "0.8rem",
-                    color: "grey",
-                    textOverflow: "ellipsis",
-                    maxLines: 1,
-                  }}
-                >
-                  {record.fields["Author"]}
-                </p>
+            <div className={styles.bookcard} key={index}>
+              <Image
+                src={record.fields["Url"]}
+                alt={record.fields["Title"]}
+                width={200}
+                height={300}
+              />
+              <div className={styles.ellipses}>
+                <h6>{record.fields["Title"]}</h6>
+              </div>
+              <div className={styles.ellipsesAuthor}>
+                <p>{record.fields["Author"]}</p>
+              </div>
+              <a href={record.fields["buylink"]} className={styles.buy}>
+                Buy Now
               </a>
             </div>
           ))}

@@ -278,7 +278,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#12B3EB", en
 
 .bookcard h6{
   margin: 0 0 1rem 0;
-  font-size: 1rem;
+  font-size: medium;
   line-height: 1.0625;
   font-weight: 400;
   letter-spacing: .011em;
@@ -303,6 +303,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#12B3EB", en
 .bookcard p{
   display: block;
   font-weight: 300;
+  font-size: small;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;

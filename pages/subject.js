@@ -13,7 +13,6 @@ export default function Resource({ records }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>nae raste │ ✍️</h1>
         <p
           style={{
             fontSize: "1.5rem",

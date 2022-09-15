@@ -5,7 +5,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Image from "next/image";
 
 const Resource = ({ records }) => {
   const router = useRouter();
@@ -24,8 +23,6 @@ const Resource = ({ records }) => {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>nae raste │ ✍️</h1>
-
         <h2
           style={{
             padding: "1rem",
@@ -35,7 +32,6 @@ const Resource = ({ records }) => {
         >
           So, what do you want to learn today?
         </h2>
-        <Image src="/geometry.png" width={200} height={200} alt="Resources" />
         <div className={styles.grid}>
           {gradefilteredRecords.map((record, index) => (
             <Link

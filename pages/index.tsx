@@ -19,14 +19,33 @@ const Home: NextPage = () => {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>
-         nae raste │ नए रास्ते
+      <div className={styles.title}>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            paddingLeft: '0.5rem',
+            paddingRight: '0.5rem',
+            backgroundColor: '#f9f9f9',
+
+            
+          }}>
+            <Image src="/nrsvg.svg" alt="näraste" width={50} height={50} />
+            
+
+
+            <h2 className={styles.h2}>
+          maths
+            </h2>
+            
+
+          </div>
         
-        </h1>
+        
+        </div>
 
         <p className={styles.description}>
-          <h2>maths<br/>
-            </h2> <span>
+    <span>
           <label>select your class </label>  
             <select style={{
               width: '100px',
@@ -97,24 +116,8 @@ const Home: NextPage = () => {
           
           
         </div>
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'column'
-        }}>
-
-        <p style={{
-          padding: '10px',
-        }}>
-        Subscribe to our newsletter to get updates on new resources and blogs
-          </p>
-        <Image src={'/arrow-27.svg'} alt="Newsletter" width={100} height={100} />
-        </div>
-
       </main>
-
-      <Script async data-uid="37bab4a468" src="https://artisanal-producer-6695.ck.page/37bab4a468/index.js"></Script>
+      <Script async data-uid="b3ea752d78" src="https://artisanal-producer-6695.ck.page/b3ea752d78/index.js"></Script>
     </div>
   )
 }

@@ -4,10 +4,17 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
+import Script from "next/script";
 
 export default function Resource({ records }) {
+  const helpText = `I want to share ${records.fields["Chapter Name"]} questions with you.`;
+  const encoded = encodeURI(helpText);
   return (
     <div className={styles.container}>
+      <Script
+        type="module"
+        src="https://js.withorbit.com/orbit-web-component.js"
+      />
       <Head>
         <title>{records.fields["Chapter Name"]}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -64,6 +71,100 @@ export default function Resource({ records }) {
           </div>
         ) : (
           <></>
+        )}
+        {records.fields.hasOwnProperty("Question (from Questions)") === false ? (
+          <div className={styles.practiceCard}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                }}
+              >
+                <Image
+                  src="/orbit.svg"
+                  width={50}
+                  height={50}
+                  alt="Orbit Logo"
+                />
+                <h3> Chance to win exciting rewards </h3>
+              </div>
+              <p
+                style={{
+                  paddingLeft: "0.5rem",
+                  fontWeight: "300",
+                }}
+              >
+                Orbit helps you remember important facts and formulas.
+                Currently,{records.fields["Chapter Name"]} contains no
+                questions. Contribute questions and answers and win exciting
+                gifts. 🎁
+              </p>
+              <button className={styles.button}>
+                <a
+                  href={`https://wa.me/919755992478?text=${encoded}`}
+                  style={{
+                    color: "white",
+                    textDecoration: "none",
+                  }}
+                >
+                  Share Qs on WhatsApp
+                </a>
+              </button>
+            </div>
+          </div>
+        ) : (
+          <>
+            <div
+              style={{
+                display: "flex",
+                marginBottom: "1rem",
+              }}
+            >
+              <Image
+                src="/orbit.svg"
+                alt="Orbit image"
+                width={100}
+                height={100}
+              />
+              <h3>
+                Deeply internalize ideas and facts through periodic review.
+              </h3>
+            </div>
+            <orbit-reviewarea
+              color="orange"
+              style={{
+                width: "100%",
+              }}
+            >
+              {records.fields["Question (from Questions)"].map(
+                (question, index) => (
+                  <orbit-prompt
+                    question={question}
+                    answer={records.fields["Answer (from Questions)"][index]}
+                    key={index}
+                  ></orbit-prompt>
+                )
+              )}
+            </orbit-reviewarea>
+            Want to Contribute Questions ?
+            <button className={styles.button}>
+              <a
+                href={`https://wa.me/919755992478?text=${encoded}`}
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                }}
+              >
+                Share Qs on WhatsApp
+              </a>
+            </button>
+          </>
         )}
 
         <div className={styles.grid}>

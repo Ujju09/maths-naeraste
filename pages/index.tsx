@@ -7,7 +7,7 @@ import Script from 'next/script'
 import { useState } from 'react'
 const Home: NextPage = () => {
 
-  const grades = [9,10,11,12];
+  const grades = [8,9,10,11,12];
   const [grade, setGrade] = useState(9);
   return (
     <div className={styles.container}>

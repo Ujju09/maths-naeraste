@@ -62,7 +62,7 @@ export default function Resource({ records }) {
               >
                 Khan Academy contains a lot of practice questions for you to do
                 in {records.fields["Chapter Name"]}. They also have explanation
-                videos.
+                videos in Hindi and English.
               </p>
               <Link href={records.fields["practiceOnKhanAcademy"]}>
                 <button className={styles.button}>Practice Now</button>
@@ -200,6 +200,41 @@ export default function Resource({ records }) {
             </div>
           )}
         </div>
+        {
+          <div className={styles.practiceCard}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <h3
+                style={{
+                  textDecoration: "none",
+                  color: "green",
+                  cursor: "pointer",
+                  paddingLeft: "0.5rem",
+                }}
+              >
+                NCERT Exemplar PDF {""}
+              </h3>
+              <p
+                style={{
+                  paddingLeft: "0.5rem",
+                  fontWeight: "300",
+                }}
+              >
+                NCERT Exemplar contains very good question sets. They help you
+                prepare better for exams, boost confidence and more.
+              </p>
+              <Link href={records.fields["ncertExemplar"]}>
+                <button className={styles.button}>
+                  Download Now. It&apos;s free!
+                </button>
+              </Link>
+            </div>
+          </div>
+        }
         <p
           style={{
             color: "grey",

@@ -219,21 +219,23 @@ export default function Resource({ records }) {
                 Videos on {records.fields["Chapter Name"]}, that we think
                 you&apos;ll love.
               </h3>
+              <div className= {styles.videoGrid}>
               {records.fields["Url"].split(";").map((url, index) => (
                 <iframe
                   key={index}
                   src={url}
                   title={url}
-                  width="100%"
-                  height="200"
-                  frameBorder="10"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className={styles.iframe}
                 ></iframe>
               ))}
+              </div>
+              
             </div>
           )}
+        
         </div>
         <p
           style={{

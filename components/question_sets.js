@@ -86,7 +86,7 @@ export default function QuestionSets({ records }) {
 }
 
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
     const { id } = context.query;
     const PUBLIC_API_KEY = process.env.NEXT_PUBLIC_API_KEY;
   
@@ -102,5 +102,6 @@ export async function getServerSideProps(context) {
   
     return {
       props: { records: records }, // will be passed to the page component as props
+      revalidate: 86400,
     };
   }
